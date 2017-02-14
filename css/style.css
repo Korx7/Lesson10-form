@@ -1,0 +1,178 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+
+}
+section {
+
+    width: 55%;
+    box-shadow: 0 0 15px #2B2B2B;
+    display: flex;
+    justify-content: center;
+}
+section > div {
+    width: 95%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.content {
+    flex-grow: 1;
+    width: 70%;
+
+    margin: auto;
+    flex-shrink: 0;
+
+}
+.input-grup {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.875em;
+
+
+
+}
+.field{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+}
+
+.field > input, select, textarea{
+    order: 1;
+    border-width: 0px 0px 2px 0px;
+    border-color: #BBBBBB;
+    width: 78%;
+    height: 25px;
+    margin-left: 10px;
+}
+
+input:required + label::after{
+    content: "*";
+    color: red;
+}
+
+fieldset {
+    width: 70%;
+}
+fieldset div{
+    margin-bottom: 10px;
+}
+.field > textarea{
+    resize: vertical;
+}
+textarea:required + label::after{
+    content: "*";
+    color: red;
+}
+.field > input[type="checkbox"]{
+    order: 0;
+    width: auto;
+    height: auto;
+}
+.field > label[for="agree"]{
+    width: 76%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+input[type="submit"] {
+    width: 75px;
+    height: 40px;
+    border: 1px solid #2b90ff;
+    background-color: white;
+    color: #2b90ff;
+}
+
+.field input:focus  {
+    outline-width: 0;
+    border-bottom: 2px solid #228aff;
+}
+.field select:focus  {
+    outline-width: 0;
+    border-bottom: 2px solid #228aff;
+}
+.field textarea:focus  {
+    outline-width: 0;
+    border-bottom: 2px solid #228aff;
+}
+label[for="number"]{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+@media screen and (max-width:1065px){
+    section {
+        width: 90%;
+    }
+    section > div {
+        width: 70%;
+    }
+    .content {
+        width: 95%;
+    }
+}
+@media screen and (max-width:850px){
+    section > div {
+        width: 515px;
+    }
+
+}
+@media screen and (max-width:460px){
+    body{
+        justify-content:flex-start;
+    }
+    section > div {
+        width: 95%;
+    }
+    .content {
+        width: 100%;
+    }
+    .field {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    #field1 {
+        flex-direction: row;
+    }
+    .field input,select {
+        height: 29px;
+    }
+    .field input,select,textarea {
+        margin-left: 0;
+    }
+    label[for="agree"]{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .field > input, select, textarea {
+        width: 95%;
+        border: 2px solid #BBBBBB;
+    }
+    input[type="submit"] {
+        width: 90%;
+    }
+    fieldset {
+        width: 87%;
+    }
+    .field input:focus  {
+        outline: 2px solid #228aff;
+
+    }
+    .field select:focus  {
+        outline: 2px solid #228aff;
+    }
+    .field textarea:focus  {
+        outline: 2px solid #228aff;
+    }
+
+}
