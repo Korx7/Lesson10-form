@@ -58,10 +58,14 @@ input:required + label::after{
 }
 
 fieldset {
-    width: 70%;
+    width: 73%;
+    margin: 0;
 }
 fieldset div{
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
 }
 .field > textarea{
     resize: vertical;
@@ -173,6 +177,9 @@ label[for="number"]{
     }
     .field textarea:focus  {
         outline: 2px solid #228aff;
+    }
+    section {
+        box-shadow: none;
     }
 
 }
